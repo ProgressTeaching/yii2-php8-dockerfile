@@ -8,4 +8,6 @@ RUN apt-get -y install nodejs
 RUN apt-get install -y autossh
 RUN apt-get install -y systemd
 RUN docker-php-ext-install sockets
+RUN apt-get -y --no-install-recommends install g++ zlib1g-dev
 RUN pecl install grpc
+RUN docker-php-ext-enable grpc
